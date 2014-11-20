@@ -23,12 +23,13 @@ var ApiUtil = require('./ApiUtil');
 var VIEW_ACTION = Constants.PayloadSources.VIEW_ACTION;
 var SERVER_ACTION = Constants.PayloadSources.SERVER_ACTION;
 var ActionTypes = Constants.ActionTypes;
+var dispatch = myDispatcher.handleAction;
 
 
 var Actions = {
     sendRequest: function (data) {
 
-        myDispatcher.handleAction(VIEW_ACTION, ActionTypes.SEND_REQUEST, data);
+        dispatch(VIEW_ACTION, ActionTypes.SEND_REQUEST, data);
 
         var request = {
             method: 'POST',
@@ -38,7 +39,7 @@ var Actions = {
 
         ApiUtil(request, function (err, response) {
 
-            myDispatcher.handleAction(SERVER_ACTION, ActionTypes.RECEIVE_RESPONSE, response);
+            dispatch(SERVER_ACTION, ActionTypes.RECEIVE_RESPONSE, response);
         });
     }
 };
