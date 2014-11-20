@@ -1,6 +1,6 @@
 {
   "name": "flux-dispatcher",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Flux dispatcher ready for action.",
   "main": "index.js",
   "scripts": {
