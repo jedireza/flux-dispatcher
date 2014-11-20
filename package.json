@@ -12,7 +12,7 @@
   },
   "keywords": [
     "flux",
-    "store",
+    "dispatcher",
     "react"
   ],
   "author": "Reza Akhavan <jedireza@gmail.com> (http://reza.akhavan.me/)",
