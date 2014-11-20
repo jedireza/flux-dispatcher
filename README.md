@@ -38,7 +38,7 @@ var Actions = {
 
         ApiUtil(request, function (err, response) {
 
-            dispatch(SERVER_ACTION, ActionTypes.RECEIVE_RESPONSE, response);
+            myDispatcher.handleAction(SERVER_ACTION, ActionTypes.RECEIVE_RESPONSE, response);
         });
     }
 };
