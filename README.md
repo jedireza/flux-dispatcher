@@ -23,12 +23,10 @@ var myDispatcher = require('flux-dispatcher'); // that's us, such meta
 var Constants = require('./Constants');
 var ApiUtil = require('./ApiUtil');
 
-
 var VIEW_ACTION = Constants.PayloadSources.VIEW_ACTION;
 var SERVER_ACTION = Constants.PayloadSources.SERVER_ACTION;
 var ActionTypes = Constants.ActionTypes;
 var dispatch = myDispatcher.handleAction;
-
 
 var Actions = {
     sendRequest: function (data) {
@@ -47,7 +45,6 @@ var Actions = {
         });
     }
 };
-
 
 module.exports = Actions;
 ```
