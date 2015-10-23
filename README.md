@@ -2,9 +2,9 @@
 
 A Flux dispatcher ready for action.
 
+[![Build Status](https://travis-ci.org/jedireza/flux-dispatcher.svg?branch=master)](https://travis-ci.org/jedireza/flux-dispatcher)
 [![Dependency Status](https://david-dm.org/jedireza/flux-dispatcher.svg?theme=shields.io)](https://david-dm.org/jedireza/flux-dispatcher)
 [![devDependency Status](https://david-dm.org/jedireza/flux-dispatcher/dev-status.svg?theme=shields.io)](https://david-dm.org/jedireza/flux-dispatcher#info=devDependencies)
-[![Build Status](https://travis-ci.org/jedireza/flux-dispatcher.svg?branch=master)](https://travis-ci.org/jedireza/flux-dispatcher)
 
 
 ## Install
