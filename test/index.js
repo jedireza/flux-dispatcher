@@ -1,6 +1,5 @@
 var Lab = require('lab');
 var Code = require('code');
-var Path = require('path');
 var Dispatcher = require('../index');
 
 
