@@ -27,6 +27,8 @@
   },
   "devDependencies": {
     "code": "^1.x.x",
+    "eslint-config-hapi": "^6.1.0",
+    "eslint-plugin-hapi": "^3.0.0",
     "flux": "^2.x.x",
     "lab": "^6.x.x"
   }

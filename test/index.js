@@ -1,14 +1,16 @@
-var Lab = require('lab');
-var Code = require('code');
-var Dispatcher = require('../index');
+'use strict';
+
+const Lab = require('lab');
+const Code = require('code');
+const Dispatcher = require('../index');
 
 
-var lab = exports.lab = Lab.script();
+const lab = exports.lab = Lab.script();
 
 
-lab.experiment('Dispatcher', function () {
+lab.experiment('Dispatcher', () => {
 
-    lab.test('it is an object with a handleAction method', function (done) {
+    lab.test('it is an object with a handleAction method', (done) => {
 
         Code.expect(Dispatcher).to.be.an.object();
         Code.expect(Dispatcher.handleAction).to.be.a.function();
@@ -16,11 +18,11 @@ lab.experiment('Dispatcher', function () {
     });
 
 
-    lab.test('it throws when passing an incorrect number of arguments to handleAction', function (done) {
+    lab.test('it throws when passing an incorrect number of arguments to handleAction', (done) => {
 
-        var none = Dispatcher.handleAction.bind(Dispatcher);
-        var one = Dispatcher.handleAction.bind(Dispatcher, null);
-        var many = Dispatcher.handleAction.bind(Dispatcher, null, null, null, null);
+        const none = Dispatcher.handleAction.bind(Dispatcher);
+        const one = Dispatcher.handleAction.bind(Dispatcher, null);
+        const many = Dispatcher.handleAction.bind(Dispatcher, null, null, null, null);
         Code.expect(none).to.throw();
         Code.expect(one).to.throw();
         Code.expect(many).to.throw();
@@ -28,10 +30,10 @@ lab.experiment('Dispatcher', function () {
     });
 
 
-    lab.test('it successfully dispatches with two arguments', function (done) {
+    lab.test('it successfully dispatches with two arguments', (done) => {
 
-        var id;
-        var callback = function (payload) {
+        let id;
+        const callback = (payload) => {
 
             if (payload.action.type === 'TWO_ARGS') {
                 Code.expect(payload).to.be.an.object();
@@ -43,15 +45,15 @@ lab.experiment('Dispatcher', function () {
         };
         id = Dispatcher.register(callback);
 
-        var action = Dispatcher.handleAction.bind(Dispatcher, 'TWO_ARGS', 'DATA2A');
+        const action = Dispatcher.handleAction.bind(Dispatcher, 'TWO_ARGS', 'DATA2A');
         Code.expect(action).to.not.throw();
     });
 
 
-    lab.test('it successfully dispatches with three arguments', function (done) {
+    lab.test('it successfully dispatches with three arguments', (done) => {
 
-        var id;
-        var callback = function (payload) {
+        let id;
+        const callback = function (payload) {
 
             if (payload.action.type === 'THREE_ARGS') {
                 Code.expect(payload).to.be.an.object();
@@ -64,7 +66,7 @@ lab.experiment('Dispatcher', function () {
         };
         id = Dispatcher.register(callback);
 
-        var action = Dispatcher.handleAction.bind(Dispatcher, 'SOURCE', 'THREE_ARGS', 'DATA3A');
+        const action = Dispatcher.handleAction.bind(Dispatcher, 'SOURCE', 'THREE_ARGS', 'DATA3A');
         Code.expect(action).to.not.throw();
     });
 });
