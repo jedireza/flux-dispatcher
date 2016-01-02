@@ -6,7 +6,7 @@ var FluxDispatcher = require('flux').Dispatcher;
 var dispatcher = new FluxDispatcher();
 
 
-dispatcher.handleAction = function handleAction (source, type, data) {
+dispatcher.handleAction = function handleAction(source, type, data) {
 
     if (arguments.length < 2 || arguments.length > 3) {
         var message = 'Expected two or three arguments.';

@@ -4,8 +4,8 @@
   "description": "A Flux dispatcher ready for action.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/lab/bin/lab -c -L",
-    "test-cover": "./node_modules/lab/bin/lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
+    "test": "lab -c -L",
+    "test-cover": "lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
   },
   "repository": {
     "type": "git",
@@ -23,13 +23,13 @@
   },
   "homepage": "https://github.com/jedireza/flux-dispatcher",
   "peerDependencies": {
-    "flux": "^2.x.x"
+    "flux": "2.x.x"
   },
   "devDependencies": {
-    "code": "^2.x.x",
-    "eslint-config-hapi": "^6.1.0",
-    "eslint-plugin-hapi": "^3.0.0",
-    "flux": "^2.x.x",
-    "lab": "^7.x.x"
+    "code": "2.x.x",
+    "eslint-config-hapi": "8.x.x",
+    "eslint-plugin-hapi": "4.x.x",
+    "flux": "2.x.x",
+    "lab": "8.x.x"
   }
 }
