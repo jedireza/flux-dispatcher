@@ -32,7 +32,6 @@ lab.experiment('Dispatcher', () => {
 
     lab.test('it successfully dispatches with two arguments', (done) => {
 
-        let id;
         const callback = (payload) => {
 
             if (payload.action.type === 'TWO_ARGS') {
@@ -43,7 +42,7 @@ lab.experiment('Dispatcher', () => {
                 done();
             }
         };
-        id = Dispatcher.register(callback);
+        const id = Dispatcher.register(callback);
 
         const action = Dispatcher.handleAction.bind(Dispatcher, 'TWO_ARGS', 'DATA2A');
         Code.expect(action).to.not.throw();
@@ -52,7 +51,6 @@ lab.experiment('Dispatcher', () => {
 
     lab.test('it successfully dispatches with three arguments', (done) => {
 
-        let id;
         const callback = function (payload) {
 
             if (payload.action.type === 'THREE_ARGS') {
@@ -64,7 +62,7 @@ lab.experiment('Dispatcher', () => {
                 done();
             }
         };
-        id = Dispatcher.register(callback);
+        const id = Dispatcher.register(callback);
 
         const action = Dispatcher.handleAction.bind(Dispatcher, 'SOURCE', 'THREE_ARGS', 'DATA3A');
         Code.expect(action).to.not.throw();
